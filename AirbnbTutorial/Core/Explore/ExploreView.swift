@@ -19,16 +19,20 @@ struct ExploreView: View {
                         
                         NavigationLink(value: listing) {
                             ListingItemView()
-                                .frame(height: 400)
+                                .frame(height: 410)
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
                         
                     }
                 }
-                //.padding()
+                .padding()
             }
             .navigationDestination(for: Int.self) { listing in
-                Text("Listing \(listing)")
+                ListingDetailView()
+                   .navigationBarBackButtonHidden()
+                   .navigationBarHidden(true)
+                   
+                   
             }
         }
     }

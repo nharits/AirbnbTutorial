@@ -18,7 +18,7 @@ struct ListingDetailView: View {
                 ListingImageCarouseView()
                     .frame(height: 320)
                 
-                Button(action: { dismiss() }) {
+                Button(action: { dismiss()  }) {
                     Image(systemName: "chevron.left")
                         .foregroundStyle(.black)
                         .background {
@@ -179,6 +179,7 @@ struct ListingDetailView: View {
             }
             .padding()
         }
+        .toolbarVisibility(.hidden, for: .tabBar)
         .ignoresSafeArea()
         .padding(.bottom, 80)
         .overlay(alignment: .bottom) {
